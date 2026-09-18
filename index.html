@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Mini Drive</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="justify-content: center;">
+<body>
     <h1>App</h1>
+    <header>
+        <input type="text" id="fileName" placeholder="Nome do arquivo (ex: foto.png)">
+        <input type="text" id="fileSize" placeholder="Tamanho (ex: 2MB)">
+        
+        <button id="uploadBtn">Upload de arquivo</button>
+    </header>
     
+    <div id="savedArchives">
+       
+    </div>
+
+    
+    <script src="js/backend/crud.js"></script>
+    <script src="js/frontend/app.js"></script>
 </body>
 </html>

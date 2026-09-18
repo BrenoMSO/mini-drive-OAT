@@ -1,0 +1,65 @@
+body { 
+    margin: auto; 
+    min-height: 100vh; 
+    background: #000f30; 
+    background: linear-gradient(90deg, rgba(0, 15, 48, 1) 0%, rgba(26, 49, 199, 1) 50%, rgba(48, 48, 61, 1) 100%); 
+    font-family: Arial, sans-serif; 
+    margin-top: 10px; 
+} /* Chave fechada aqui */
+
+header { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; /* Diminuí o gap para os inputs caberem melhor */
+    padding: 15px; 
+    background: #35363a8c; 
+    margin: auto; 
+    width: max-content; 
+    border-radius: 30px; 
+} /* Chave fechada aqui */
+
+header button, header a, header input { 
+    background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%); 
+    background-color: #2dabf9; 
+    border: 2px solid #0b0e07; 
+    display: inline-block; 
+    color: #ffffff; 
+    font-family: Arial, sans-serif; 
+    font-size: 15px; 
+    padding: 8px 8px; 
+    text-decoration: none; 
+    border-radius: 10px; 
+} /* Chave fechada aqui */
+
+/* Estilo extra para os inputs não ficarem parecendo botões */
+header input {
+    background: #ffffff;
+    color: #000000;
+}
+
+header button:hover, header a:hover { 
+    background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%); 
+    background-color: #0688fa; 
+    cursor: pointer;
+} /* Chave fechada aqui */
+
+header button:active, header a:active { 
+    position: relative; 
+    top: 1px; 
+} /* Chave fechada aqui */
+
+#savedArchives { 
+    background: #35363a8c; 
+    width: calc(100% - 40px); 
+    min-height: calc(100vh - 140px); 
+    margin: 20px auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    border-radius: 30px; 
+	display: flex;     
+    flex-wrap: wrap;     
+    gap: 20px;           
+	align-content: flex-start;
+	
+}
