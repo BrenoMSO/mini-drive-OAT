@@ -34,8 +34,8 @@ function AtualizarInterface() {
             </div>
             
             <div style="display: flex; gap: 10px; width: 100%;">
-            <button onclick="${prepararEdicao(ficheiro.id)}" style="background-color: #f39c12; color: white; border: none; padding: 8px; border-radius: 5px; cursor: pointer; flex: 1;">Editar</button>
-                <button onclick="console.log('Deletar ID: ${ficheiro.id}')" style="background-color: #e74c3c; color: white; border: none; padding: 8px; border-radius: 5px; cursor: pointer; flex: 1;">Excluir</button>
+            <button onclick="prepararEdicao('${ficheiro.id}')" style="background-color: #f39c12; color: white; border: none; padding: 8px; border-radius: 5px; cursor: pointer; flex: 1;">Editar</button>
+                <button onclick="prepararDelecao('${ficheiro.id}')" style="background-color: #e74c3c; color: white; border: none; padding: 8px; border-radius: 5px; cursor: pointer; flex: 1;">Excluir</button>
             </div>
         `;
 
@@ -48,8 +48,20 @@ function prepararEdicao(id) {
 
     if (novoNome !== null && novoNome.trim() !== "") {
         AttArquivo(id, novoNome);
+
+        AtualizarInterface();
     }
-    AtualizarInterface();
+    
+}
+
+function prepararDelecao(id) {
+    let confirmacao = confirm("Tem certeza que quer excluir?");
+
+    if (confirmacao == true) {
+        deletarArquivo(id);
+
+        AtualizarInterface();
+    }
 }
 
 

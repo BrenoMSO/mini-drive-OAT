@@ -6,13 +6,13 @@ function SaveLocalStorage() {
 
 function CriarArquivo(nome, tamanho) {
     const novoArquivo = {
-        id: idNovo,
+        id: Date.now(),
         nome: nome,
         tamanho: tamanho
     }
     myArchives.push(novoArquivo);
     SaveLocalStorage();
-    idNovo
+    console.log(novoArquivo);
 }
 
 function LerArquivo() {
