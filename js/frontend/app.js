@@ -75,8 +75,8 @@ uploadBtn.addEventListener("click", function() {
     }
 
     CriarArquivo(nome, tamanho);
-    fileNameInput = "";
-    fileSizeInput = "";
+    fileNameInput.value = "";
+    fileSizeInput.value = "";
 
     AtualizarInterface();
 

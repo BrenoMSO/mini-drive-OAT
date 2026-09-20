@@ -1,4 +1,4 @@
-let myArchives = [] || JSON.parse(localStorage.getItem("miniDriveArquivos"));
+let myArchives = JSON.parse(localStorage.getItem("miniDriveArquivos")) || [];
 var idNovo = 1;
 function SaveLocalStorage() {
     localStorage.setItem("miniDriveArquivos", JSON.stringify(myArchives));
@@ -21,7 +21,7 @@ function LerArquivo() {
 
 function AttArquivo(id, novoNome) {
     let index = myArchives.findIndex(function(ficheiro) {
-        return ficheiro.id === id;
+        return ficheiro.id === Number(id);
     });
     if (index !== -1) {
         myArchives[index].nome = novoNome;
@@ -32,7 +32,7 @@ function AttArquivo(id, novoNome) {
 
 function deletarArquivo(id) {
     myArchives = myArchives.filter(function(ficheiro) {
-        return ficheiro.id !== id;
+        return ficheiro.id !== Number(id);
     });
 
     SaveLocalStorage();
